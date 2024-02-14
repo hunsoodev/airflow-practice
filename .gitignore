@@ -2,8 +2,12 @@
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
 # airflow
+airflow.db
+airflow.cfg
 logs/
-
+airflow-venv/
+airflow-webserver.pid
+standalone_admin_password.txt
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -128,7 +132,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-airflow-env/
 .env
 .venv
 env/
