@@ -21,7 +21,7 @@ jobs:
           filters: |
             dags:
               - 'dags/**/*.py'
-              - 'test/dags/**/*.py' 
+              - 'tests/dags/**/*.py' 
             docker:
               - 'docker-compose.yaml'
               - 'Dockerfile'
@@ -97,7 +97,4 @@ jobs:
           
           docker compose down
           docker compose up -d
-          
-     
-          
-      
+        
