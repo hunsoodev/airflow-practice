@@ -10,8 +10,9 @@ DAG_FILES = glob.glob(DAG_PATH, recursive=True)
 
 @pytest.mark.parametrize("dag_file", DAG_FILES)
 def test_dag_integrity(dag_file):
-    dag_bag = DagBag(dag_folder=os.path.dirname(dag_file), 
-                    include_examples=False)
+    dag_bag = DagBag(
+        dag_folder=os.path.dirname(dag_file),
+        include_examples=False)
     # DAG 파일 로드
     dag_bag.process_file(dag_file, only_if_updated=True)
     # 로드된 DAG들을 검사
