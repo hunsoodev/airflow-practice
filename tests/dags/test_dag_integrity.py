@@ -16,7 +16,7 @@ def test_dag_integrity(dag_file):
 
     This test ensures that each DAG file can be loaded without errors,
     including checking for circular dependencies and other potential issues.
-    
+
     Args:
         dag_file (str): The path to a DAG file to be tested.
     """
@@ -25,7 +25,7 @@ def test_dag_integrity(dag_file):
         include_examples=False)
 
     dag_bag.process_file(dag_file, only_if_updated=True)
-    
+
     for dag_id, dag in dag_bag.dags.items():
         assert dag_id in dag_bag.dags, "DAG ID not found in dag_bag.dags"
         assert not dag_bag.import_errors, "Import errors found in DagBag"
