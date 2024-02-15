@@ -2,7 +2,7 @@
 
 import airflow.utils.dates
 from airflow import DAG
-from airflow.operators.dummy import DummyOperator  
+from airflow.operators.dummy import DummyOperator
 
 # DAG 정의
 dag = DAG(
