@@ -3,6 +3,7 @@
 import glob
 import os
 import pytest
+
 # from airflow.models import DAG
 from airflow.models.dagbag import DagBag
 
@@ -20,9 +21,7 @@ def test_dag_integrity(dag_file):
     Args:
         dag_file (str): The path to a DAG file to be tested.
     """
-    dag_bag = DagBag(
-        dag_folder=os.path.dirname(dag_file),
-        include_examples=False)
+    dag_bag = DagBag(dag_folder=os.path.dirname(dag_file), include_examples=False)
 
     dag_bag.process_file(dag_file, only_if_updated=True)
 
